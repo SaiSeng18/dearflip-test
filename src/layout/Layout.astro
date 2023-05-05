@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title?: string;
+}
+
+const { title = "Dear Flip Test" } = Astro.props as Props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<script type="text/javascript" src="turn/jquery.min.1.7.js"></script>
+		<script
+			type="text/javascript"
+			src="E:\Web Project\Astro\dearflip-test\turn\modernizr.2.5.3.min.js"
+		></script>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
